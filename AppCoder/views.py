@@ -3,9 +3,13 @@ from django.http import HttpResponse
 from AppCoder.models import Curso
 
 # Create your views here.
-def curso(self):
-    curso = Curso(nombre="Desarrollo Web", comision=19881)
-    curso.save()
-    documentodeTexto = f"--> Curso: {curso.nombre} Comision: {curso.comision}"
-    return HttpResponse(documentodeTexto)
-#Aqui Agregamos algo
+def inicio(request):
+    return HttpResponse("Vista Inicio")
+def cursos(request):
+    return HttpResponse("Vista Cursos")
+def profesores(request):
+    return HttpResponse("Vista Profesores")
+def entregables(request):
+    return HttpResponse("Vista Entregables")
+def estudiantes(request):
+    return HttpResponse("Vista Estudiantes")
